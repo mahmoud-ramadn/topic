@@ -1,0 +1,1081 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+
+    font-family: 'Poppins', sans-serif;
+   
+}
+:root{
+    --primary:#80d0c7;
+--info:#717275;;
+--dark:#13547a;
+--black:#000000;
+--white:#ffffff;
+--light:#e7f1ff;
+--volelti:#536dfe;
+--light-blue:#00b0ff;
+--showdow:#e7e7e7;
+--danger:#f50057;
+--extara-light:#f0f8ff;
+}
+li a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.content{
+    width: 100%;
+    background-image: linear-gradient(247deg,#80d0c7,#13547a);
+    height: 520px;
+    position: relative;
+}
+.content::after{
+    position: absolute;
+    left: 0;
+    content: "";
+    top: 100px;
+    width: 100%;
+    height:1px;
+ 
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.landing{
+    width: 100%;
+    height: 460px;
+    background-color: var(--primary);
+    border-radius: 0px 0px  100px 100px;
+}
+
+
+.all-contetnt{
+    margin: 0 auto;
+    width: 1600px;
+    max-width: 100%;
+    padding: 0 100px;
+}
+
+.header{
+display: flex;
+position: fixed;
+width: 100%;
+left: 0;
+top: 0;
+z-index: 999;
+transition: 1s;
+
+justify-content:space-around;
+align-items: center;
+
+}
+
+ .header ul li a.active{
+    color:var(--dark);
+
+}
+ 
+
+.white{
+    color: white;
+}
+
+.header .logo{
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img{
+    width: 30px;
+margin-right: 10px;
+}
+
+.header .logo h1{
+    font-weight: 600;
+
+}
+
+.header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+.header ul li a{
+    color: white;
+    
+}
+.header ul li a:hover{
+    color: var(--dark);
+}
+
+.header ul li:nth-of-type(6) a{
+    margin-right: 10px;
+
+}
+.header ul li:nth-of-type(6) {
+    position: relative;
+ padding: 30px 0;
+
+}
+
+
+
+
+
+.updown-list{
+    position: absolute;
+    width: 180px;
+    height: 77px;
+    background-color: white;
+    left: 0;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 13px 0px #dfd5d5e0;
+
+    text-align: center;
+    transition: top 0.3s;
+    border-radius: 10px;
+     visibility: hidden;
+     z-index: 100;
+}
+
+.updown-list::after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom:10px solid var(--white);
+    left: 20px;
+    top: -20px;
+}
+.header ul li:nth-of-type(6):hover .updown-list{
+    visibility: visible;
+    top: 70px;
+}
+
+.header >i{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: flex;
+    transition: 0.4s;
+    align-items: center;
+    justify-content: center;
+    color:darkblue;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+.header >i:hover{
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+/* start landnig text */
+
+.landing-text{
+    width: 70%;
+
+ position: relative;
+margin: 0 auto;
+height: 200px;
+top:160px;
+
+   text-align: center;
+}
+
+
+
+.landing-text h1{
+ font-size: 60px;
+ padding: 0;
+ margin: 0;
+ font-weight: 700;
+ color: white;
+}
+
+.landing-text p{
+font-size: 20px;
+padding: 20px;
+color:var(--dark);
+font-weight: 500;
+
+
+}
+.input-search{
+    position: relative;
+}
+.input-search input{
+    width: 100%;
+    padding: 38px;
+    padding-left:80px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+.input-search i{
+    position: absolute;
+    left: 38px;
+    top: 34px;
+    font-size: 25px;
+
+
+}
+.input-search .btn-serach{
+    position: absolute;
+    right: 17px;
+   background-color: var(--primary);
+    top: 17px;
+    padding: 20px 30px;
+    border-radius: 40px;
+    width: 140px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 1s ;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+.input-search .btn-serach:hover{
+    background-color: var(--dark);
+}
+
+.landing{
+    position: relative;
+}
+
+.landing .under-landing{
+ width:  1000px;
+ padding: 30px;
+height: 800px;
+ display: flex;
+ justify-content: center;
+ align-items: start;
+ gap: 30px;
+ position: absolute;
+ top: -100px;
+ left: 50%;
+z-index: 20;
+ transform:translate(-50%);
+}
+.under-landing  div{
+    transition: 0.3s;
+
+}
+.under-landing .col-one:hover{
+   margin-top: -10px;
+    
+}
+.under-landing .col-two:hover{
+   margin-top: -10px;
+    
+}
+
+.under-landing .col-one{
+    width: 430px;
+    height: 451px;
+    box-shadow: 0 0 13px 0px #dfd5d5e0;
+    padding: 35px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.under-landing .col-one .titel{
+    display: flex;
+    color:black;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.under-landing .col-one .titel  h3{
+
+font-size: 25px;
+font-weight: 500;
+
+}
+.under-landing .col-one .titel  h3 a{
+    color: black;
+    text-decoration: none;
+}
+.under-landing .col-one .titel span{
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: var(--light-blue);
+}
+
+
+
+.under-landing .col-one .col-body{
+    margin: 30px 0;
+ 
+} 
+
+.under-landing .col-one .col-body p{
+    line-height: 1.3;
+
+    font-size: 20px;
+    color:gray;
+}
+
+
+.under-landing .col-one img{
+    width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+.under-landing .col-two{
+    width: 570px;
+    padding: 35px;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    height: 451px;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 0 13px 0px #dfd5d5e0;
+    background-color: white;
+    background-image: url(../imges/businesswoman-using-tablet-analysis.jpg);
+}
+
+.under-landing .col-two::after{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    z-index: -1;
+    background-image: linear-gradient(247deg,#80d0c74d,#13547aba);
+}
+
+.under-landing .col-two .titel {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.under-landing .col-two .titel  span{
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: var(--volelti);
+}
+.under-landing .col-two .col-body{
+    margin: 30px 0;
+
+}
+
+.under-landing .col-two .col-body p{
+    line-height: 1.6;
+
+    font-size: 20px;
+    color: white;
+}
+.btn-lernmore{
+   background-color: var(--primary);
+    padding: 20px 10px;
+margin-top: 20px;
+    border-radius: 40px;
+    width: 160px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 1s ;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btn-lernmore:hover{
+    background-color: var(--dark);
+
+}
+
+.share-icons{
+    width: 100%;
+    padding: 35px;
+    height:100px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 20px;
+   
+}
+.share-icons .one {
+    display: flex;
+    align-items: center;
+}
+.share-icons .one span{
+    font-size: 18px;
+    margin-right: 10px;
+    color: white;
+}
+
+.share-icons .one .icons{
+    display: flex;
+    width: 200px;
+
+    justify-content: center;
+    gap: 30px;
+}
+
+.share-icons .one .icons i{
+    width: 40px;
+    height:40px;
+    transition: 1s;
+    border-radius:50% ;
+    background-color:var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-icons .one .icons i:hover{
+    background-color: var(--dark);
+}
+
+.share-icons  .last{
+    font-size: 23px;
+    color: white;
+    transition: 1s;
+   
+}
+
+.share-icons  .last:hover{
+    color: var(--dark);
+}
+
+/* end landnig text */
+
+
+
+/* start browse Topics */
+
+.browse-topics{
+    padding: 100px;
+  max-width: 100%;
+  width: 1500PX;
+  margin: 0 auto;
+  text-align: center;
+    height: 800PX;
+}
+
+.browse-topics h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.browse-topics .browse-btns{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+.browse-topics .browse-btns span{
+    width: fit-content;
+    padding: 20px 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+  
+}
+.brows-active{
+  position: relative;
+   color: var(--dark);
+}
+.brows-active::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.6PX;
+    background-color: rgb(128, 128, 128);
+}
+
+.browse-topics .browse-btns span::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+    width: 0%;
+    height: 0.6PX;
+    background-color: rgb(128, 128, 128);
+    }
+.browse-topics .browse-btns span:hover{
+    
+    color: var(--dark);
+
+}
+.browse-topics .browse-btns span:hover::after{
+    width: 100%;
+}
+
+.landing{
+    position: relative;
+}
+.landing::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0.6px;
+    left: 0px;
+    bottom: -283px;
+    background-color: rgba(0, 174, 255, 0.58);
+}
+
+
+.brows-box{
+    width: 100%;
+    height: 400px;
+padding-top: 50px;
+    display: flex;
+    gap: 20px;
+ 
+    justify-content:center;
+    align-items: center;
+}
+
+
+.brows-box div{
+width: 400px;
+background-image: unset;
+position: relative;
+height: 400px;
+transition: 0.3s;
+padding: 30px;
+border-radius: 10px;
+box-shadow:  2px 2px 13px 5px #e7e7e7c2;
+}
+
+
+.brows-box >div:hover{
+    box-sizing: border-box;
+    margin-top: -10px;
+}
+
+.brows-box div .titel  {
+    display: flex;
+    color:black;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+ 
+}
+
+
+.brows-box div .titel  h3{
+
+font-size: 25px;
+font-weight: 500;
+
+}
+.brows-box  div .titel  h3 a{
+    color: black;
+    text-decoration: none;
+}
+.brows-box div .titel span{
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: var(--light-blue);
+}
+
+
+
+
+
+
+.brows-box  div .col-body{
+    margin: 30px 0;
+ 
+} 
+
+.brows-box   div  p{
+    margin: 30px 0;
+    line-height: 1.3;
+    font-size: 20px;
+    color:gray;
+    width: 100%;
+    text-align: start;
+}
+
+
+.brows-box  div img{
+    width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.brows-box div .titel  span.squer-one{
+    background-color: var(--danger);
+}
+
+.brows-box .fan-one{
+    width: 45%;
+    height: 300px;
+    padding: 30px;
+
+}
+
+.brows-box .fan-one p{
+    line-height: 1.3;
+    font-size: 16px;
+}
+
+
+
+.brows-box .fan-one img{
+
+margin-top: 10px;
+width:70%;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom: 20px;
+  height:150px ;
+}
+
+.brows-box .fan-two{
+    width: 45%;
+   
+    padding: 35px;
+    height: 300px;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    background-image: url(../imges/businesswoman-using-tablet-analysis.jpg);
+    z-index: 1;
+}
+.brows-box .fan-two::after{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    z-index: -1;
+    background-image: linear-gradient(200deg,#80d0c74d,#13547aba);
+}
+
+.brows-box .fan-two .titel{
+    height: 0;
+    margin-bottom: 10px;
+    padding: 0;
+   background-color: #000000;
+    box-shadow: unset;
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.brows-box .fan-two .titel span{
+    width: 30px;
+    height: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    background-color: var(--volelti);
+}
+
+.brows-box .fan-two .titel h3{
+  
+    
+    padding: 0;
+}
+
+.brows-box .fan-two  p{
+line-height: 1.7;
+  
+    padding: 0;
+
+    font-size: 15px;
+    color: white;
+}
+
+
+.brows-box .fan-two .btn-lernmore{
+    background-color: var(--primary);
+     padding: 15px 10px;
+     border-radius: 40px;
+     width: 160px;
+     border: none;
+     outline: none;
+     cursor: pointer;
+     transition: 1s ;
+     color: white;
+     font-size: 18px; 
+     position: relative;
+     z-index: 1;
+     font-weight: 400;
+    display: flex;
+    align-self: start;
+    justify-content: center;
+ }
+
+ .brows-box .fan-two .btn-lernmore:hover{
+    background-color: var(--dark);
+ }
+
+
+
+
+ .brows-box .fan-two  .share-icons{
+    
+  
+    box-shadow: unset;
+ padding: 0;
+ width: 100%;
+    height:100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    bottom: 0px;
+   
+}
+.share-icons .one {
+    display: flex;
+    box-shadow: unset;
+    align-items: center;
+}
+.share-icons .one span{
+    font-size: 18px;
+    font-weight: 300;
+    margin-right: 10px;
+    color: white;
+}
+
+.share-icons .one .icons{
+    display: flex;
+    width: 200px;
+
+
+    justify-content:start;
+    gap:16px;
+}
+
+.share-icons .one .icons i{
+    width: 35px;
+    height:35px;
+    transition: 1s;
+    border-radius:50% ;
+    background-color:var(--primary);
+    display: flex;
+    font-size: 19px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.brows-box   div span.squer-three{
+    background-color: orange;
+}
+
+
+ .brows-box   div.educaton-one{
+
+width: 45%;
+
+
+}
+
+.brows-box   div span.squer-four{
+    background-color:#00bfa6;
+}
+/* end browse Topics */
+
+/* start how it work */
+.how-it{
+    margin:100px 0;
+    width: 100%;
+
+    position: relative;
+    height: 1000px;
+    background-image: url(../imges/collae.jpg);
+    background-size: cover;
+    background-position: center center;
+   z-index: 1;
+}
+.how-it::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color:#6ba9afa9;
+z-index: -1;
+}
+
+.how-content{
+    margin: 0 auto;
+    width: 1600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+
+
+ 
+}
+.how-content .crs{
+
+    width: 15%;
+
+    display: flex;
+    padding: 20px;
+    position: relative;
+    flex-direction: column;
+ justify-content: space-between;
+    align-items:center;
+    height: 90%;
+    gap: 20%;
+
+    transition: 1s;
+}
+/*  star criclies section */
+   .crs .line{
+    position: absolute;
+    width: 10px;
+    transition: 1s;
+    height:90%;
+    top: 41px;
+  background-color:var(--dark);
+    z-index: -2;
+    
+   }
+
+
+
+   .crs .lin-tow{
+    position: absolute;
+    width: 10px;
+    transition: 1s;
+    height:0%;
+    top: 41px;
+  
+   z-index: -1;
+    background-color: var(--light-blue)
+   }
+
+
+
+
+
+.how-content .crs span{
+    width:100px;
+    height: 100px;
+    display: flex;
+    transition: 1s;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1;
+    position: relative;
+  background-color: var(--light-blue);
+}
+
+.how-content .crs span i{
+    font-size: 25px;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid white;
+    color: white;
+}
+
+
+
+
+/*  end criclies section */
+
+
+
+
+
+
+
+
+.how-content .texts{
+  
+    width: 65%;
+    padding: 50px;
+    height: 90%;
+    display: flex;
+   
+
+  text-align: center;
+
+}
+.how-content .texts .rows{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   gap: 20%;
+    text-align: start;
+
+
+}
+.how-content .texts .rows div{
+
+color: white;
+
+
+
+
+}
+
+.how-content .texts .rows div h3{
+    font-size: 26px;
+
+    font-weight: 700;
+}
+.how-content .texts .rows div p{
+    line-height: 1.8;
+    font-size: 20px;
+}
+/* end how it work */
+
+/*  start quastion */
+.fqrs{
+
+    height: 600px;
+    max-width: 1600px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0 auto;
+
+
+}
+.fqrs .col{
+    width: 30%;
+}
+
+.fqrs .col img{
+    width: 100%;
+}
+
+.fqrs .col-two{
+padding: 30px;
+    height: 80%;
+    /* background-color: #13547a; */
+width: 40%;
+
+    
+}
+
+.fqrs .col-two div span{
+    display: flex;
+    align-items: center;
+ 
+    margin: 30px 0;
+    width: 100%;
+    padding:20px;
+    border-radius: 35px;
+   
+    justify-content: space-between;
+}
+
+.fqrs .col-two div span i{
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+
+.show{
+    display: block;
+    background-color: red;
+}
+.hide{
+    display: none;
+}
+
+.fqrs .col-two div .text {
+
+    padding: 0 20px;
+
+    color: var(--info);
+    line-height: 1.7;
+}
+
+
+/*  end quastion */
+/* start getintouch */
+.get-intouch{
+    padding: 50px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--extara-light);
+text-align: center;
+}
+
+.content
+
+/* end getintouch */
+
+
+ 
